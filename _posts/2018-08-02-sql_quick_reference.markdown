@@ -310,13 +310,109 @@ def selects_bear_that_killed_Tim
 end
 ```
 
+#### SQL JOINS
 
 
+##### INNER JOIN
+
+Returns all the rows from both tables you are querying where a certain condition is met.
+
+```
+SELECT column_name(s) 
+FROM first_table 
+INNER JOIN second_table
+ON first_table.column_name = second_table.column_name;
+```
+
+Example - return the name and breed of the cat along with the name of that cat’s owner:
+
+```
+SELECT Cats.name, Cats.breed, Owners.name
+AS "owner_name" #aliasing the name column of owners table
+FROM Cats 
+INNER JOIN Owners
+ON Cats.owner_id = Owners.id;
+```
+
+Result - returns all of the data in the specified columns from both tables:
 
 
+##### LEFT OUTER JOIN
+
+Returns all rows from the left, or first, table, regardless of whether or not they met the JOIN condition. The query will also return the matched data from the right, or second, table.
+
+```
+SELECT column_name(s)
+FROM first_table
+LEFT JOIN second_table
+ON first_table.column_name=second_table.column_name;
+```
+
+Example:
+
+```
+SELECT Cats.name, Cats.breed, Owners.name 
+FROM Cats 
+LEFT OUTER JOIN Owners 
+ON Cats.owner_id = Owners.id;
+```
+
+Result - returns all of the cats with matched data regarding owner’s name for those cats that have an owner, and an empty space in the owner’s name column for the cat that doesn’t have an owner.
 
 
+##### RIGHT OUTER JOIN
 
+The reverse of the LEFT OUTER JOIN - Returns all data from the right, or second, table and the matched data from the left, or first table.
+
+```
+SELECT column_name(s)
+FROM first_table
+RIGHT JOIN second_table
+ON first_table.column_name = second_table.column_name;
+```
+
+If we insert a new owner into Owners table:
+
+```
+INSERT INTO owners (name) VALUES ("Penny");
+```
+
+Example:
+
+```
+SELECT Cats.name, Cats.breed, Owners.name 
+FROM Cats 
+RIGHT OUTER JOIN Owners 
+ON Cats.owner_id = Owners.id;
+```
+
+Result - selects all of the data from the second table and only the matched data from the first table (Penny is now part of all the data from the second table).
+
+
+##### FULL OUTER JOIN
+
+
+*a.k.a. FULL JOIN*
+
+Combines the result of both a LEFT and RIGHT OUTER JOIN. In other words, returns all the data from both the first and second tables.
+
+```
+SELECT column_name(s)
+FROM first_table
+FULL OUTER JOIN second_table
+ON first_table.column_name = second_table.column_name;
+```
+
+Example:
+
+```
+SELECT Cats.name, Cats.breed, Owners.name
+FROM Cats
+FULL OUTER JOIN Owners
+ON Cats.owner_id = Owners.id;
+```
+
+Result - includes both cats without owners and owners without cats. In other words, it includes *all* of our data.
 
 
 
