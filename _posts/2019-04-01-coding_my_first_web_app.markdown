@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Coding My First Web App"
-date:       2019-04-01 22:30:05 +0000
+date:       2019-04-01 18:30:05 -0400
 permalink:  coding_my_first_web_app
 ---
 
@@ -81,6 +81,8 @@ The issue was how to display the user’s preselected option on the dropdown lis
 ```
 
 The above code would display the user’s preselected option, but then it would also display the choices for “Low”, “Medium”, “High”. So you would see either option twice in the dropdown list. I added “————“ to separate the preselected option and the new options should the user want to update. Not bad.
+
+![priority dropdown](Argonity.github.io/img/isave3.png)
 
 Another reason I enjoyed this project was because I got to know the “Git” functions a little more. I learned how to breakup commits by strategically using the “git add” command. If I made changes on several different pages in one sitting, instead of using “git add .” to stage all changes, I could still break up the commits by using “git add <path>” to make commits for individual changes.
 
