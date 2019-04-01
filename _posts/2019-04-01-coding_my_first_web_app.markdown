@@ -19,7 +19,7 @@ Think about your current savings account you have at one of the major banks. Mos
 
 At a very basic level, my app does just this. Allowing you to create as many savings accounts as you wish - for all the items you’d like to save up for. 
 
-### You Can Spend Hours on CSS … I sure did
+## You Can Spend Hours on CSS … I sure did
 
 I have a whole new respect for CSS. I had forgotten how intricate and incredibly fun it is! Even a simple enhancement took a few hours out of me. But I had a great time researching different styles and trying to implement those into my code. 
 
