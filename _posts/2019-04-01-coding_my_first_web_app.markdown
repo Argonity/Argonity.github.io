@@ -94,4 +94,4 @@ Check my app on GitHub and the video walkthrough!
 
 My app on GitHub: [GitHub - Argonity/sinatra-isave-app](https://github.com/Argonity/sinatra-isave-app)
 
-Video Walkthrough: https://youtu.be/8WWEQvzmKJE
+Video Walkthrough: [video walkthrough](https://youtu.be/8WWEQvzmKJE)
